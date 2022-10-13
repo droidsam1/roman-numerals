@@ -25,4 +25,9 @@ public class RomanNumeralsTest {
     public void shouldRepresentFourAsIV() {
         Assertions.assertEquals("IV", RomanNumerals.getRomanRepresentationFor(4));
     }
+
+    @Test
+    public void shouldRepresentFiveAsV() {
+        Assertions.assertEquals("V", RomanNumerals.getRomanRepresentationFor(5));
+    }
 }

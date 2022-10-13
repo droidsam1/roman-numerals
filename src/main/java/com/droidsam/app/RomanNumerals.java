@@ -11,6 +11,10 @@ public class RomanNumerals {
             return "IV";
         }
 
+        if(arabicNumber == 5){
+            return "V";
+        }
+
         return romaRepresentation.toString();
     }
 }
