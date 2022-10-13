@@ -20,4 +20,9 @@ public class RomanNumeralsTest {
     public void shouldRepresentThreeAsIII() {
         Assertions.assertEquals("III", RomanNumerals.getRomanRepresentationFor(3));
     }
+
+    @Test
+    public void shouldRepresentFourAsIV() {
+        Assertions.assertEquals("IV", RomanNumerals.getRomanRepresentationFor(4));
+    }
 }
