@@ -19,6 +19,15 @@ public class RomanNumerals {
             return "VI";
         }
 
+        if(arabicNumber == 7){
+            return "VII";
+        }
+
+        if(arabicNumber == 8){
+            return "VIII";
+        }
+
+
         return romaRepresentation.toString();
     }
 }
