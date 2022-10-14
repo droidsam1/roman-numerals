@@ -19,7 +19,8 @@ public class RomanNumerals {
         }
 
         if (arabicNumber == 4) {
-            return "IV";
+            romaRepresentation.append("IV");
+            arabicNumber -= 4;
         }
 
         for (int i = 0; i < arabicNumber; i++) {
