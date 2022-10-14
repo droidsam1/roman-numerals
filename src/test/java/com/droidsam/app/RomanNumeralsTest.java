@@ -8,7 +8,7 @@ public class RomanNumeralsTest {
 
 
     @ParameterizedTest
-    @CsvSource({"1, I", "2, II", "3, III", "4, IV", "5, V"})
+    @CsvSource({"1, I", "2, II", "3, III", "4, IV", "5, V", "6, VI"})
     void shouldRepresentArabicNumberAsRoman(String arabicInput, String expectedRomanRepresentation) {
         Assertions.assertEquals(expectedRomanRepresentation, RomanNumerals.getRomanRepresentationFor(Integer.parseInt(arabicInput)));
     }
