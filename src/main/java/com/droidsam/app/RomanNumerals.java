@@ -4,13 +4,14 @@ public class RomanNumerals {
     public static String getRomanRepresentationFor(int arabicNumber) {
         StringBuilder romaRepresentation = new StringBuilder();
 
-        if (arabicNumber >= 10) {
+        while (arabicNumber >= 10) {
             romaRepresentation.append("X");
             arabicNumber -= 10;
         }
 
         if (arabicNumber == 9) {
-            return "IX";
+            romaRepresentation.append("IX");
+            arabicNumber -= 9;
         }
 
         if (arabicNumber >= 5) {
