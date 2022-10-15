@@ -1,6 +1,11 @@
 package com.droidsam.app;
 
+import java.util.Map;
+
 public class RomanNumerals {
+
+    private static final Map<Integer, String> romanRepresentations = Map.of(1, "I", 4, "IV");
+
     public static String getRomanRepresentationFor(int arabicNumber) {
         StringBuilder romaRepresentation = new StringBuilder();
 
@@ -14,7 +19,7 @@ public class RomanNumerals {
             arabicNumber -= 50;
         }
 
-        if(arabicNumber >= 40){
+        if (arabicNumber >= 40) {
             romaRepresentation.append("XL");
             arabicNumber -= 40;
         }
@@ -34,14 +39,11 @@ public class RomanNumerals {
             arabicNumber -= 5;
         }
 
-        if (arabicNumber == 4) {
-            romaRepresentation.append("IV");
-            arabicNumber -= 4;
-        }
-
-        while (arabicNumber >= 1) {
-            romaRepresentation.append("I");
-            arabicNumber -= 1;
+        for (Map.Entry<Integer, String> representations : romanRepresentations.entrySet()) {
+            while (arabicNumber >= representations.getKey()) {
+                romaRepresentation.append(representations.getValue());
+                arabicNumber -= representations.getKey();
+            }
         }
 
 
