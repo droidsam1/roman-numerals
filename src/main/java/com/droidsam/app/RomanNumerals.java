@@ -1,10 +1,19 @@
 package com.droidsam.app;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class RomanNumerals {
 
-    private static final Map<Integer, String> romanRepresentations = Map.of(1, "I", 4, "IV");
+    private static final Map<Integer, String> romanRepresentations = populateRomanRepresentations();
+
+    private static Map<Integer, String> populateRomanRepresentations() {
+        Map<Integer, String> romanRepresentations = new LinkedHashMap<>();
+        romanRepresentations.put(5, "V");
+        romanRepresentations.put(4, "IV");
+        romanRepresentations.put(1, "I");
+        return romanRepresentations;
+    }
 
     public static String getRomanRepresentationFor(int arabicNumber) {
         StringBuilder romaRepresentation = new StringBuilder();
@@ -34,10 +43,6 @@ public class RomanNumerals {
             arabicNumber -= 9;
         }
 
-        if (arabicNumber >= 5) {
-            romaRepresentation.append("V");
-            arabicNumber -= 5;
-        }
 
         for (Map.Entry<Integer, String> representations : romanRepresentations.entrySet()) {
             while (arabicNumber >= representations.getKey()) {
