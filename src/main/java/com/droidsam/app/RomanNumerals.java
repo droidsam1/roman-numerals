@@ -4,6 +4,11 @@ public class RomanNumerals {
     public static String getRomanRepresentationFor(int arabicNumber) {
         StringBuilder romaRepresentation = new StringBuilder();
 
+        if (arabicNumber >= 100) {
+            romaRepresentation.append("C");
+            arabicNumber -= 100;
+        }
+
         if (arabicNumber >= 50) {
             romaRepresentation.append("L");
             arabicNumber -= 50;
@@ -34,8 +39,9 @@ public class RomanNumerals {
             arabicNumber -= 4;
         }
 
-        for (int i = 0; i < arabicNumber; i++) {
+        while (arabicNumber >= 1) {
             romaRepresentation.append("I");
+            arabicNumber -= 1;
         }
 
 
