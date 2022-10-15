@@ -9,6 +9,7 @@ public class RomanNumerals {
 
     private static Map<Integer, String> populateRomanRepresentations() {
         Map<Integer, String> romanRepresentations = new LinkedHashMap<>();
+        romanRepresentations.put(1000, "M");
         romanRepresentations.put(100, "C");
         romanRepresentations.put(50, "L");
         romanRepresentations.put(40, "XL");
