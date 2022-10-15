@@ -13,6 +13,7 @@ public class RomanNumerals {
         romanRepresentations.put(900, "CM");
         romanRepresentations.put(500, "D");
         romanRepresentations.put(100, "C");
+        romanRepresentations.put(90, "XC");
         romanRepresentations.put(50, "L");
         romanRepresentations.put(40, "XL");
         romanRepresentations.put(10, "X");
