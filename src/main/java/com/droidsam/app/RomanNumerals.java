@@ -4,7 +4,7 @@ public class RomanNumerals {
     public static String getRomanRepresentationFor(int arabicNumber) {
         StringBuilder romaRepresentation = new StringBuilder();
 
-        if (arabicNumber >= 100) {
+        while (arabicNumber >= 100) {
             romaRepresentation.append("C");
             arabicNumber -= 100;
         }
